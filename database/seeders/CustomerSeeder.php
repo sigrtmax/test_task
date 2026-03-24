@@ -10,16 +10,16 @@ use Illuminate\Database\Seeder;
 class CustomerSeeder extends Seeder
 {
     private array $customers = [
-        ['name' => 'Ivan Petrov', 'email' => 'ivan.petrov@example.com', 'phone' => '+79001234567'],
-        ['name' => 'Anna Sidorova', 'email' => 'anna.sidorova@example.com', 'phone' => '+79007654321'],
-        ['name' => 'Dmitry Volkov', 'email' => 'dmitry.volkov@example.com', 'phone' => '+79009876543'],
-        ['name' => 'Elena Kozlova', 'email' => 'elena.kozlova@example.com', 'phone' => null],
-        ['name' => 'Alexey Morozov', 'email' => 'alexey.morozov@example.com', 'phone' => '+79001112233'],
-        ['name' => 'Natalia Novikova', 'email' => 'natalia.novikova@example.com', 'phone' => '+79004445566'],
-        ['name' => 'Sergey Fedorov', 'email' => 'sergey.fedorov@example.com', 'phone' => null],
-        ['name' => 'Maria Sokolova', 'email' => 'maria.sokolova@example.com', 'phone' => '+79007778899'],
-        ['name' => 'Pavel Andreev', 'email' => 'pavel.andreev@example.com', 'phone' => '+79000001122'],
-        ['name' => 'Olga Lebedeva', 'email' => 'olga.lebedeva@example.com', 'phone' => '+79003334455'],
+        ['name' => 'Иван Петров', 'email' => 'ivan.petrov@example.com', 'phone' => '+79001234567'],
+        ['name' => 'Анна Сидорова', 'email' => 'anna.sidorova@example.com', 'phone' => '+79007654321'],
+        ['name' => 'Дмитрий Волков', 'email' => 'dmitry.volkov@example.com', 'phone' => '+79009876543'],
+        ['name' => 'Елена Козлова', 'email' => 'elena.kozlova@example.com', 'phone' => null],
+        ['name' => 'Алексей Морозов', 'email' => 'alexey.morozov@example.com', 'phone' => '+79001112233'],
+        ['name' => 'Наталья Новикова', 'email' => 'natalia.novikova@example.com', 'phone' => '+79004445566'],
+        ['name' => 'Сергей Фёдоров', 'email' => 'sergey.fedorov@example.com', 'phone' => null],
+        ['name' => 'Мария Соколова', 'email' => 'maria.sokolova@example.com', 'phone' => '+79007778899'],
+        ['name' => 'Павел Андреев', 'email' => 'pavel.andreev@example.com', 'phone' => '+79000001122'],
+        ['name' => 'Ольга Лебедева', 'email' => 'olga.lebedeva@example.com', 'phone' => '+79003334455'],
     ];
 
     public function run(): void
@@ -28,6 +28,6 @@ class CustomerSeeder extends Seeder
             Customer::updateOrCreate(['email' => $customer['email']], $customer);
         }
 
-        $this->command->info('Customers seeded: ' . count($this->customers) . ' records.');
+        $this->command->info('Клиенты загружены: ' . count($this->customers) . ' записей.');
     }
 }
